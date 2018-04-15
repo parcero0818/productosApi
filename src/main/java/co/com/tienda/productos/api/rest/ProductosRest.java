@@ -1,9 +1,11 @@
-package co.com.tienda.productos.api.model.rest;
+package co.com.tienda.productos.api.rest;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,4 +27,9 @@ public class ProductosRest {
 		return productosRepository.findAll();
 	}
 
+	@PostMapping(value = "/addProduct")
+	public ProductosModel addProduct(@RequestBody ProductosModel producto) {
+		return productosRepository.save(producto);
+	}
+	
 }

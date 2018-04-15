@@ -19,6 +19,8 @@ public class ProductosModel {
 	private String precio;
 	
 	private String porcentajeDescuento;
+	
+	private String imagen;
 
 	public String getNombre() {
 		return nombre;
@@ -66,6 +68,14 @@ public class ProductosModel {
 
 	public void setPorcentajeDescuento(String porcentajeDescuento) {
 		this.porcentajeDescuento = porcentajeDescuento;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 	
 }
